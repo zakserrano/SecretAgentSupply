@@ -1,151 +1,245 @@
 
+
 /* GENERAL */
 
 html, body{
   display: flex;
   flex-direction: column;
   align-items: center;
+  min-width: 1400px;
   background-color: black;
   font-family: Helvetica, sans-serif;
   font-size: 18px;
   color: white;
 }
-.section{
-  min-width: 1600px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.strip{
-  min-width: 100%;
-  display: flex;
-  justify-content: center;
-}
-.content{
-  min-width: 960px;
-  display: flex;
-}
-.box{
-  display: flex;
-}
 
 /* HEADER */
+.h{
+  display: flex;
+  flex-direction: column;
+  min-width: 100%;
+}
 
 /* logo */
-#logo_container{
+.h_logo_strip{
+  display: flex;
   flex-direction: row;
-  align-items: center;
+  min-width: 100%;
+  justify-content: center;
 }
-#logo_container img{
+.h_logo_content{
+  display: flex;
+  flex-direction: row;
+  min-width: 960px;
+  max-width: 960px;
+  align-items: center;
+  justify-content: flex-start;
+}
+.h_logo_content img{
   height: 1.5rem;
   margin-left: 0.5rem;
   margin-right: 1rem;
 }
-#logo_container p{
+.h_logo_content p{
   font-size: 1rem;
-  margin: 0.66rem 0;
+  margin-top: 0.66rem;
+  margin-bottom: 0.66rem;
 }
 
-/* main_banner */
-#bike_banner{
-  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
-  height: 25rem;
-  width: auto;
+/* bike */
+.h_bike_strip{
   display: flex;
-  
+  flex-direction: row;
+  justify-content: center;
+  min-height: 25rem;
+  background-image: url(https://s3.amazonaws.com/codecademy-content/courses/freelance-1/unit-5/moto.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#black_banner{
+.h_bike_content{
+  display: flex;
+  flex-direction: row;
+  min-width: 960px;
+}
+.h_bike_banner{
+  display: flex;
+  flex-direction: column;
+  max-width: 26.5rem;
+  max-height: 11.25rem;
   background-color: black;
-  font-weight: bold;
-  width: 20rem;
   margin-top: 9rem;
-  z-index: 5;
-  display: block;
 }
-#black_banner #new{
+.h_bike_banner_new{
   font-size: 1rem;
+  font-weight: bold;
   margin-top: 2rem;
   margin-left: 3rem;
 }
-#black_banner #sport{
+.h_bike_banner_sport{
   font-size: 2rem;
+  font-weight: bold;
   margin-top: 0.25rem;
   margin-left: 3rem;
-  margin-bottom: 2rem;
 }
 
 /* nav */
-#nav{
-  background-color: firebrick;
-}
-ul{
-  list-style: none;
+.h_nav_strip{
+  display: flex;
   flex-direction: row;
   justify-content: center;
+  background-color: black;
+  background-color: firebrick;
 }
-li{
-  margin: 0.75rem auto;
+.h_nav_content{
+  display: flex;
+  flex-direction: row;
+  min-width: 960px;
 }
-a{
+.h_nav_content ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.h_nav_content li, a{
   color: white;
+  text-decoration: none;
 }
 
 /* MAIN */
-
-main{
+.m{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 100%;
   background-color: white;
 }
-#product_list{
-  z-index: 5;
+.m_content{
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  min-width: 960px;
+  max-width: 960px;
 }
-#product_list div{
-  width: 100%;
-  flex-direction: row;
-
-}
-#product{
-  max-width: 30%; /*doesn't work with width 100% ?¿?*/
-  border: 4px solid black;
-  margin-bottom: 3rem;
-  flex-direction: column;
-  justify-content: center;
-}
-#product img{
-  height: 9rem;
-  width: auto;
-  margin: 2rem auto;
-}
-#product p{
-  text-align: center;
-  background-color: black;
-  padding: 0.5rem 0;
-  align-items: center;
-}
-.details{
-  width: 35%;
+/* products */
+.m_content_products{
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.m_content_products p{
+  display: flex;
+  background-color: black;
+  width: 100%;
   justify-content: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.m_content_products_product1{
+  display: flex;
+  flex-direction: column;
+  min-width: 30%;
+  max-width: 30%;
+  border: 4px solid black;
+}
+.m_content_products_product1 img{
+  width: auto;
+  height: 9rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  object-fit: contain;
+}
+.m_content_products_product2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 30%;
+  max-width: 30%;
+  border: 4px solid black;
+}
+.m_content_products_product2 img{
+  width: auto;
+  height: 9rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  object-fit: contain;
+}
+.m_content_products_product3{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 30%;
+  max-width: 30%;
+  border: 4px solid black;
+}
+.m_content_products_product3 img{
+  max-width: 50%;
+  height: 9rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  object-fit: contain;
+}
+
+/* details */
+.m_content_details{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 4rem;
 }
-.details p{
-  background-color: black;
-  padding-left: 2rem;
-  padding: 1rem auto;
+.m_content_details_1{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
 }
-#numbers{
-  background-color: white;
+.m_content_details_1_location{
+  background-color: black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+}
+.m_content_details_1_xy{
+  display: flex;
+  width: auto;
   color: black;
+  background-color: white;
+}
+.m_content_details_2{
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+}
+.m_content_details_2_hours{
+  background-color: black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 2rem;
+}
+.m_content_details_2_schedule{
+  display: flex;
+  width: auto;
+  color: black;
+  background-color: white;
 }
 
 /* FOOTER */
-
-footer{
-  height: 5rem;
-  background-color: black;
+.f{
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 5rem;
+}
+.f_content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 960px;
+  max-width: 960px;
+}
+.f_content p{
 }
