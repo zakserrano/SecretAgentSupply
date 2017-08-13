@@ -1,4 +1,6 @@
-
+body, div, p, img{
+  border: 1px solid red;
+}
 
 /* GENERAL */
 
@@ -241,5 +243,21 @@ html, body{
   min-width: 960px;
   max-width: 960px;
 }
-.f_content p{
+
+@media only screen and (max-width: 1024px){
+  .m_content_products{
+    overflow: hidden;
+  }
+  .m_content_products_product1{
+    min-width: 47%;
+    max-width: 47%;
+  }
+  .m_content_products_product2{
+    min-width: 47%;
+    max-width: 47%;
+  }
+  .m_content_products_product3{
+    min-width: 47%;
+    max-width: 47%;
+  }
 }
